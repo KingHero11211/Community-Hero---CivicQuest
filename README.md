@@ -1,4 +1,4 @@
-                                                               # CivicQuest 🏙️
+<h1 align="center"># CivicQuest 🏙️</h1>
 
 <div align="center">
 
