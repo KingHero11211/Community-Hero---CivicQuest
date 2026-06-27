@@ -1,4 +1,4 @@
-<img width="1659" height="893" alt="image" src="https://github.com/user-attachments/assets/da5b8f2e-c61f-4a3e-bf6c-a5ae7bd84e14" /># CivicQuest 🏙️
+# CivicQuest 🏙️
 
 <div align="center">
 
