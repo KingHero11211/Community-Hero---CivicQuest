@@ -1,4 +1,4 @@
-# CivicQuest 🏙️
+<img width="1659" height="893" alt="image" src="https://github.com/user-attachments/assets/da5b8f2e-c61f-4a3e-bf6c-a5ae7bd84e14" /># CivicQuest 🏙️
 
 <div align="center">
 
@@ -274,7 +274,14 @@ CivicQuest is built around an intelligent multi-step agentic pipeline that autom
 
 ### 📷 Issue Reporter with AI Analysis
 *Photo upload interface with real-time Gemini Vision analysis results*
-![Uploading image.png…]()
+<img width="1659" height="893" alt="image" src="https://github.com/user-attachments/assets/f993fbe5-b378-4dda-9e0d-187b4d5314ea" />
+
+
+---
+
+### 🔴 Live Issue
+*Collaborative validation, community verification, and live prioritization*
+<img width="884" height="914" alt="image" src="https://github.com/user-attachments/assets/48a82b06-2c88-4190-aa08-e7ba476bcea5" />
 
 
 ---
