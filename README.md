@@ -281,14 +281,15 @@ CivicQuest is built around an intelligent multi-step agentic pipeline that autom
 
 ### 🔴 Live Issue
 *Collaborative validation, community verification, and live prioritization*
-<img width="884" height="914" alt="image" src="https://github.com/user-attachments/assets/48a82b06-2c88-4190-aa08-e7ba476bcea5" />
+<img width="810" height="922" alt="image" src="https://github.com/user-attachments/assets/fa2e7f9c-07dc-4668-a675-26dedf695611" />
+
 
 
 ---
 
 ### 🗺️ Live Map
 *Interactive map with color-coded severity pins and filter sidebar*
-<img width="1606" height="900" alt="image" src="https://github.com/user-attachments/assets/d4fbc612-cde2-4ad6-93d1-cd60cf5d19b0" />
+<img width="1622" height="905" alt="image" src="https://github.com/user-attachments/assets/c23e5045-bdcf-4d52-8891-e2d48a22f5a6" />
 
 
 
