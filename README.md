@@ -266,30 +266,39 @@ CivicQuest is built around an intelligent multi-step agentic pipeline that autom
 
 ## 📸 Screenshots
 
-> *Screenshots will be added once the application is deployed.*
-
 ### 🏠 Home Page
 *Landing page with live city stats, recent issues, and call-to-action*
+<img width="1896" height="968" alt="image" src="https://github.com/user-attachments/assets/d4c3c0ab-29ad-4517-89d0-cf9a07e732d2" />
 
 ---
 
 ### 📷 Issue Reporter with AI Analysis
 *Photo upload interface with real-time Gemini Vision analysis results*
+![Uploading image.png…]()
+
 
 ---
 
 ### 🗺️ Live Map
 *Interactive map with color-coded severity pins and filter sidebar*
+<img width="1606" height="900" alt="image" src="https://github.com/user-attachments/assets/d4fbc612-cde2-4ad6-93d1-cd60cf5d19b0" />
+
+
 
 ---
 
 ### 📊 Impact Dashboard
 *Analytics charts showing issue resolution rates, category breakdown, and user impact*
+<img width="808" height="861" alt="image" src="https://github.com/user-attachments/assets/cd46758f-9aab-42c7-871a-97fefb0188ac" />
+
+
 
 ---
 
 ### 🏆 Leaderboard
 *Civic Points rankings with badge showcase and area filters*
+<img width="611" height="756" alt="image" src="https://github.com/user-attachments/assets/7e40972a-54f7-4e66-a3a9-2d86d7d346a1" />
+
 
 ---
 
