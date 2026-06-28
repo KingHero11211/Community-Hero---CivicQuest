@@ -78,7 +78,7 @@ export default function Settings() {
 
   const showToast = (msg, type = "success") => {
     setToast({ msg, type });
-    setTimeout(() => setToast({ msg: "", type: "success" }), 3000);
+    setTimeout(() => setToast({ msg: "", type: "success" }), 3500);
   };
 
   const handleSaveProfile = async () => {

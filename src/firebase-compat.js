@@ -184,7 +184,29 @@ class MockFirestore {
   }
 
   initSeed() {
-    if (!localStorage.getItem("civicquest_issues")) {
+    const existing = localStorage.getItem("civicquest_issues");
+    let needsReset = false;
+    if (existing) {
+      try {
+        const parsed = JSON.parse(existing);
+        if (!Array.isArray(parsed) || parsed.length < 6 || parsed.some(p => p.photoURL && (
+          p.photoURL.includes("1615412721453") || 
+          p.photoURL.includes("1605600611283") || 
+          p.photoURL.includes("1507608869274") || 
+          p.photoURL.includes("1508873696983") || 
+          p.photoURL.includes("1504307651254") ||
+          p.photoURL.includes("515162305285") ||
+          p.photoURL.includes("1611284446314") ||
+          p.photoURL.includes("1517479149777")
+        ))) {
+          needsReset = true;
+        }
+      } catch (e) {
+        needsReset = true;
+      }
+    }
+
+    if (!existing || needsReset) {
       const initialIssues = [
         {
           id: "issue-1",
@@ -201,6 +223,7 @@ class MockFirestore {
           upvotes: ["user-2", "user-3"],
           createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
           urgencyReason: "Highly hazardous for two-wheelers at night.",
+          photoURL: "https://images.unsplash.com/photo-1599740831618-24d1a93ca330?auto=format&fit=crop&q=80&w=600",
         },
         {
           id: "issue-2",
@@ -217,6 +240,7 @@ class MockFirestore {
           upvotes: ["user-1"],
           createdAt: new Date(Date.now() - 3600000 * 4).toISOString(),
           urgencyReason: "Attracting pests near high-footfall marketplace.",
+          photoURL: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=600",
         },
         {
           id: "issue-3",
@@ -225,7 +249,7 @@ class MockFirestore {
           description: "Streetlight has been flickering and completely blacked out for the last 3 days.",
           severity: "Medium",
           department: "Electricity Board",
-          status: "Resolved",
+          status: "In Progress",
           lat: 28.6012,
           lng: 77.1950,
           reporterName: "Aman Verma",
@@ -233,6 +257,58 @@ class MockFirestore {
           upvotes: [],
           createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
           urgencyReason: "Area is pitch dark, making residents feel unsafe during evening walks.",
+          photoURL: "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&q=80&w=600",
+        },
+        {
+          id: "issue-4",
+          title: "Main Water Pipeline Leak",
+          issueType: "Water Leakage",
+          description: "Underground clean water pipeline has burst, causing thousands of gallons of drinking water to flood the lane.",
+          severity: "High",
+          department: "Water & Sewage Board",
+          status: "Reported",
+          lat: 28.6180,
+          lng: 77.2010,
+          reporterName: "Vikram Singh",
+          reporterUid: "reporter-4",
+          upvotes: ["user-1", "user-3"],
+          createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+          urgencyReason: "Wasting precious clean water and flooding the basements of adjacent residential buildings.",
+          photoURL: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=600",
+        },
+        {
+          id: "issue-5",
+          title: "Severe Road Cave-In",
+          issueType: "Damaged Road",
+          description: "The asphalt has completely collapsed forming a large sinkhole/cave-in. The road needs complete reconstruction.",
+          severity: "Critical",
+          department: "PWD",
+          status: "In Progress",
+          lat: 28.6320,
+          lng: 77.2150,
+          reporterName: "Neha Kapoor",
+          reporterUid: "reporter-5",
+          upvotes: ["user-2"],
+          createdAt: new Date(Date.now() - 3600000 * 30).toISOString(),
+          urgencyReason: "Can swallow a whole car if not barricaded immediately. Immediate structural repair required.",
+          photoURL: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=600",
+        },
+        {
+          id: "issue-6",
+          title: "Clogged and Overflowing Open Drain",
+          issueType: "Open Drain",
+          description: "The main drainage canal is clogged with plastic waste, causing toxic sewage water to spill onto the pedestrian walkway.",
+          severity: "High",
+          department: "Municipal Corporation",
+          status: "Resolved",
+          lat: 28.5950,
+          lng: 77.2250,
+          reporterName: "Sanjay Dutta",
+          reporterUid: "reporter-6",
+          upvotes: ["user-1", "user-4"],
+          createdAt: new Date(Date.now() - 3600000 * 72).toISOString(),
+          urgencyReason: "Breeding ground for dengue mosquitoes. Severe stench making it impossible to walk.",
+          photoURL: "https://images.unsplash.com/photo-1595275314026-a9098922284b?auto=format&fit=crop&q=80&w=600",
         }
       ];
       localStorage.setItem("civicquest_issues", JSON.stringify(initialIssues));
@@ -774,3 +850,132 @@ export function increment(value) {
   }
   return { _increment: value };
 }
+
+export function getUseMockSystem() {
+  return useMockSystem;
+}
+
+export async function forceSeedToFirebase() {
+  const initialIssues = [
+    {
+      id: "issue-1",
+      title: "Major Pothole on Ring Road",
+      issueType: "Pothole",
+      description: "Large pothole causing traffic slowdowns near the main flyover crossing.",
+      severity: "High",
+      department: "PWD",
+      status: "In Progress",
+      lat: 28.6139,
+      lng: 77.2090,
+      reporterName: "Rohan Sharma",
+      reporterUid: "reporter-1",
+      upvotes: ["user-2", "user-3"],
+      createdAt: new Date(Date.now() - 3600000 * 24).toISOString(),
+      urgencyReason: "Highly hazardous for two-wheelers at night.",
+      photoURL: "https://images.unsplash.com/photo-1599740831618-24d1a93ca330?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      id: "issue-2",
+      title: "Garbage Overflow near Central Market",
+      issueType: "Garbage Overflow",
+      description: "Municipal bins are overflowing. Severe odor and street dogs gathering around the area.",
+      severity: "Critical",
+      department: "Sanitation Department",
+      status: "Reported",
+      lat: 28.6250,
+      lng: 77.2200,
+      reporterName: "Priya Patel",
+      reporterUid: "reporter-2",
+      upvotes: ["user-1"],
+      createdAt: new Date(Date.now() - 3600000 * 4).toISOString(),
+      urgencyReason: "Attracting pests near high-footfall marketplace.",
+      photoURL: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      id: "issue-3",
+      title: "Broken Streetlight on 5th Avenue",
+      issueType: "Broken Streetlight",
+      description: "Streetlight has been flickering and completely blacked out for the last 3 days.",
+      severity: "Medium",
+      department: "Electricity Board",
+      status: "In Progress",
+      lat: 28.6012,
+      lng: 77.1950,
+      reporterName: "Aman Verma",
+      reporterUid: "reporter-3",
+      upvotes: [],
+      createdAt: new Date(Date.now() - 3600000 * 48).toISOString(),
+      urgencyReason: "Area is pitch dark, making residents feel unsafe during evening walks.",
+      photoURL: "https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      id: "issue-4",
+      title: "Main Water Pipeline Leak",
+      issueType: "Water Leakage",
+      description: "Underground clean water pipeline has burst, causing thousands of gallons of drinking water to flood the lane.",
+      severity: "High",
+      department: "Water & Sewage Board",
+      status: "Reported",
+      lat: 28.6180,
+      lng: 77.2010,
+      reporterName: "Vikram Singh",
+      reporterUid: "reporter-4",
+      upvotes: ["user-1", "user-3"],
+      createdAt: new Date(Date.now() - 3600000 * 12).toISOString(),
+      urgencyReason: "Wasting precious clean water and flooding the basements of adjacent residential buildings.",
+      photoURL: "https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      id: "issue-5",
+      title: "Severe Road Cave-In",
+      issueType: "Damaged Road",
+      description: "The asphalt has completely collapsed forming a large sinkhole/cave-in. The road needs complete reconstruction.",
+      severity: "Critical",
+      department: "PWD",
+      status: "In Progress",
+      lat: 28.6320,
+      lng: 77.2150,
+      reporterName: "Neha Kapoor",
+      reporterUid: "reporter-5",
+      upvotes: ["user-2"],
+      createdAt: new Date(Date.now() - 3600000 * 30).toISOString(),
+      urgencyReason: "Can swallow a whole car if not barricaded immediately. Immediate structural repair required.",
+      photoURL: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=600",
+    },
+    {
+      id: "issue-6",
+      title: "Clogged and Overflowing Open Drain",
+      issueType: "Open Drain",
+      description: "The main drainage canal is clogged with plastic waste, causing toxic sewage water to spill onto the pedestrian walkway.",
+      severity: "High",
+      department: "Municipal Corporation",
+      status: "Resolved",
+      lat: 28.5950,
+      lng: 77.2250,
+      reporterName: "Sanjay Dutta",
+      reporterUid: "reporter-6",
+      upvotes: ["user-1", "user-4"],
+      createdAt: new Date(Date.now() - 3600000 * 72).toISOString(),
+      urgencyReason: "Breeding ground for dengue mosquitoes. Severe stench making it impossible to walk.",
+      photoURL: "https://images.unsplash.com/photo-1595275314026-a9098922284b?auto=format&fit=crop&q=80&w=600",
+    }
+  ];
+
+  // Force local storage and mock database update
+  localStorage.setItem("civicquest_issues", JSON.stringify(initialIssues));
+  mockDbInstance.saveCollection("issues", initialIssues);
+
+  // Seed real Firestore if enabled and available
+  if (!useMockSystem && realDbInstance) {
+    console.log("[CivicQuest] Seeding real Firestore...");
+    for (const issue of initialIssues) {
+      const docRef = realDoc(realDbInstance, "issues", issue.id);
+      await realSetDoc(docRef, {
+        ...issue,
+        createdAt: new Date(issue.createdAt).toISOString()
+      });
+    }
+    console.log("[CivicQuest] Seeding completed!");
+  }
+}
+

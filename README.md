@@ -1,4 +1,4 @@
-<h1 align="center"># CivicQuest 🏙️</h1>
+# CivicQuest 🏙️
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 *Built for [Vibe2Ship](https://codingninjas.com) by CodingNinjas × Google for Developers*
 
-[🚀 Live Demo](https://civicquest-1000213340636.asia-southeast1.run.app/) · [📖 Documentation](https://docs.google.com/document/d/14dHnnfq5se3qiQIg5W_B8M6ddxJ3mUtdYsEmj9hIQ0A/edit?usp=sharing) · [🐛 Report Bug](https://github.com/KingHero11211/CivicQuest/issues) · [✨ Request Feature](https://github.com/KingHero11211/CivicQuest/issues)
+[🚀 Live Demo](#) · [📖 Documentation](#) · [🐛 Report Bug](https://github.com/KingHero11211/CivicQuest/issues) · [✨ Request Feature](https://github.com/KingHero11211/CivicQuest/issues)
 
 </div>
 
@@ -266,47 +266,30 @@ CivicQuest is built around an intelligent multi-step agentic pipeline that autom
 
 ## 📸 Screenshots
 
+> *Screenshots will be added once the application is deployed.*
+
 ### 🏠 Home Page
 *Landing page with live city stats, recent issues, and call-to-action*
-<img width="1896" height="968" alt="image" src="https://github.com/user-attachments/assets/d4c3c0ab-29ad-4517-89d0-cf9a07e732d2" />
 
 ---
 
 ### 📷 Issue Reporter with AI Analysis
 *Photo upload interface with real-time Gemini Vision analysis results*
-<img width="1659" height="893" alt="image" src="https://github.com/user-attachments/assets/f993fbe5-b378-4dda-9e0d-187b4d5314ea" />
-
-
----
-
-### 🔴 Live Issue
-*Collaborative validation, community verification, and live prioritization*
-<img width="810" height="922" alt="image" src="https://github.com/user-attachments/assets/fa2e7f9c-07dc-4668-a675-26dedf695611" />
-
-
 
 ---
 
 ### 🗺️ Live Map
 *Interactive map with color-coded severity pins and filter sidebar*
-<img width="1622" height="905" alt="image" src="https://github.com/user-attachments/assets/c23e5045-bdcf-4d52-8891-e2d48a22f5a6" />
-
-
 
 ---
 
 ### 📊 Impact Dashboard
 *Analytics charts showing issue resolution rates, category breakdown, and user impact*
-<img width="808" height="861" alt="image" src="https://github.com/user-attachments/assets/cd46758f-9aab-42c7-871a-97fefb0188ac" />
-
-
 
 ---
 
 ### 🏆 Leaderboard
 *Civic Points rankings with badge showcase and area filters*
-<img width="611" height="756" alt="image" src="https://github.com/user-attachments/assets/7e40972a-54f7-4e66-a3a9-2d86d7d346a1" />
-
 
 ---
 

@@ -295,13 +295,13 @@ export default function Home() {
         </div>
 
         {/* ── Stats band ─────────────────────────────────────────────── */}
-        <div className="mt-16 w-full max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 fade-up delay-400">
+        <div className="mt-16 w-full max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 fade-up delay-400">
           {STATS.map((s, i) => (
-            <div key={s.label} className={`bg-white border border-[#e2e8f8] rounded-2xl p-4 text-center shadow-sm card-hover delay-${(i + 1) * 100}`}>
-              <p className="text-[28px] font-black text-[#1a56db]" style={{ fontFamily: "var(--font-display)" }}>
+            <div key={s.label} className={`bg-white border border-[#e2e8f8] rounded-2xl p-4 md:p-5.5 text-center shadow-sm card-hover delay-${(i + 1) * 100}`}>
+              <p className="text-[28px] md:text-[34px] font-black text-[#1a56db]" style={{ fontFamily: "var(--font-display)" }}>
                 {s.value}
               </p>
-              <p className="text-[12px] font-semibold text-[#737686] mt-0.5">{s.label}</p>
+              <p className="text-[12px] md:text-[13px] font-semibold text-[#737686] mt-0.5">{s.label}</p>
             </div>
           ))}
         </div>
@@ -309,7 +309,7 @@ export default function Home() {
 
       {/* ── How It Works ────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-white border-t border-[#e2e8f8]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block text-[12.5px] font-bold uppercase tracking-widest text-[#1a56db] bg-[#dbe1ff] px-4 py-1.5 rounded-full mb-3">
               How It Works
@@ -351,7 +351,7 @@ export default function Home() {
 
       {/* ── Features ────────────────────────────────────────────────── */}
       <section className="py-20 px-6 bg-[#f4f6ff]">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <span className="inline-block text-[12.5px] font-bold uppercase tracking-widest text-[#059669] bg-[#ecfdf5] px-4 py-1.5 rounded-full mb-3">
               Features

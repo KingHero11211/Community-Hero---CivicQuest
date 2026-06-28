@@ -114,7 +114,7 @@ export default function Feed() {
   };
 
   return (
-    <div className="px-4 md:px-8 py-6 max-w-2xl mx-auto w-full space-y-5 pb-24" style={{ fontFamily: "var(--font-body)" }}>
+    <div className="px-4 md:px-8 py-6 max-w-5xl mx-auto w-full space-y-5 pb-24" style={{ fontFamily: "var(--font-body)" }}>
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
@@ -218,7 +218,7 @@ export default function Feed() {
 
       {/* Feed List */}
       {!loading && filteredIssues.length > 0 && (
-        <div className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredIssues.map(issue => {
             const hasUpvoted = issue.upvotes?.includes(user?.uid);
             return (
